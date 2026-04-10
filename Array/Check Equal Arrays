@@ -1,0 +1,25 @@
+class Solution:
+    def checkEqual(self, a, b) -> bool:
+        
+        if len(a) != len(b):
+            return False
+            
+        freq = {}
+        
+        for i in a:
+            if i in freq:
+                freq[i] += 1
+            else:
+                freq[i] = 1
+        
+        for j in b:
+            if j in freq:
+                freq[j] -= 1
+            else:
+                freq[j] = 1
+                
+        for val in freq.values():
+            if val != 0:
+                return False
+            
+        return True
