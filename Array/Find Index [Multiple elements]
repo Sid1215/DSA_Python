@@ -1,0 +1,21 @@
+class Solution:
+    def findIndex (self,arr, key ):
+        #code here.
+        lst = []
+        for i in range(0, len(arr)):
+            if arr[i] == key:
+                ele = i
+                lst.append(ele)
+                break
+        else:
+            lst.append(-1)
+                
+        for j in range(len(arr)-1, -1, -1 ):
+            if arr[j] == key:
+                ele = j
+                lst.append(ele) 
+                break
+        else:
+            lst.append(-1)
+        
+        return lst
