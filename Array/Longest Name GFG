@@ -1,0 +1,7 @@
+class Solution:
+    def longest(self, arr):
+        for i in arr:
+            if len(i) == len(max(arr, key=len)):
+                return i
+                
+            
