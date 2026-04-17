@@ -1,0 +1,13 @@
+class Solution:
+    def getOddOccurrence(self, arr):
+        # code here 
+        freq = {}
+        for i in arr:
+            if i in freq:
+                freq[i] += 1
+            else:
+                freq[i] = 1
+        
+        for key, value in freq.items():
+            if value%2 != 0:
+                return key
